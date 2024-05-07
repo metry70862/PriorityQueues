@@ -1,19 +1,7 @@
-import java.awt.Point;
+import java.awt.*;
 
-public class Main {
+public class Main2 {
     public static void main(String[] args) {
-        IntComparator comparator = new IntComparator();
-        MyPQ pq = new MyPQ(comparator);
-
-        //실습 1번
-        pq.insert(new Integer(30), null);
-        pq.insert(new Integer(10), null);
-        pq.insert(new Integer(20), null);
-
-        System.out.println((Integer) pq.removemin().getKey());
-        System.out.println((Integer) pq.removemin().getKey());
-        System.out.println((Integer) pq.removemin().getKey());
-
         //실습 2번
         Point a = new Point(5, 4);
         Point b = new Point(2, 7);
@@ -81,7 +69,6 @@ public class Main {
         System.out.println(pq3.min().getValue() + printPoint(pq3.removemin().getKey()));
         System.out.println(pq3.min().getValue() + printPoint(pq3.removemin().getKey()));
     }
-
     public static String printPoint(Object object) {
         if (object instanceof Point point) {
             return "(" + (int) point.getX() + ", " + (int) point.getY() + ")";
